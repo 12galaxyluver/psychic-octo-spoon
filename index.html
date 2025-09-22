@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Surah + Ayah</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+            font-family: "Sour Gummy";
+            color: #dce0d9;
+        }
+        body {
+            background-color: #fbf6ef;
+        }
+        center {
+            padding: 100px;
+        }
+        button {
+            padding: 20px;
+            width: 150px;
+            color: white;
+            font-size: 20px;
+            border-color: transparent;
+            border-radius: 15px;
+            background-color: #ead7c3;
+            transition: box-shadow 1s, background-color 1s;
+        }
+        button:hover{
+            box-shadow: 1px 1px 30px #ead7c3;
+            background-color: #f3e0cb;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Random Surah And Ayah Generator</h1>
+        <button onclick="rands_a();">GENERATE</button>
+        <h2 id="s_a"></h2>
+    </center>
+    <script type="module">
+        require("./module.js");
+        document.getElementById("s_a").innerHTML = rands_a();
+    </script>
+</body>
+</html>
