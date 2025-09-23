@@ -31,15 +31,19 @@
             background-color: #f3e0cb;
         }
     </style>
+    <script src="script.js"></script>
 </head>
 <body>
     <center>
         <h1>Random Surah And Ayah Generator</h1>
-        <button id="b" onclick="rands_a();">GENERATE</button>
+        <button id="b">GENERATE</button>
         <h2 id="s_a"><i>Output will appear here</i></h2>
     </center>
     <script type="module">
         import rands_a from "./module.js";
+        document.getQuerySelector("b") = () => {
+            rands_a();
+        }
          rands_a().then(msg => {
                 document.getElementById("s_a").innerHTML = msg;
             }).catch(err => {
@@ -48,3 +52,4 @@
     </script>
 </body>
 </html>
+
