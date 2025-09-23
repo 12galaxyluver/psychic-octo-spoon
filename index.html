@@ -35,12 +35,16 @@
 <body>
     <center>
         <h1>Random Surah And Ayah Generator</h1>
-        <button onclick="rands_a();">GENERATE</button>
-        <h2 id="s_a"></h2>
+        <button id="b" onclick="rands_a();">GENERATE</button>
+        <h2 id="s_a"><i>Output will appear here</i></h2>
     </center>
     <script type="module">
-        require("./module.js");
-        document.getElementById("s_a").innerHTML = rands_a();
+        import rands_a from "./module.js";
+         rands_a().then(msg => {
+                document.getElementById("s_a").innerHTML = msg;
+            }).catch(err => {
+                document.getElementById("s_a").innerHTML = "Error: "+err;
+            });
     </script>
 </body>
 </html>
