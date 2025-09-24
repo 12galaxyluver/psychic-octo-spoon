@@ -1,9 +1,13 @@
 import { rands_a } from "./module.js";
-  document.QuerySelector("b").onclick = () => {
-    rands_a();
+document.QuerySelector("b").onclick = () => {
+  rands_a();
+}
+async function gets_a(){
+  try {
+    r = await rands_a();
+    document.getQuerySelector("s_a").innerHTML = `Surah and ayah: {msg}`;
   }
-rands_a().then(msg => {
-  document.getElementById("s_a").innerHTML = msg;
-}).catch(err => {
-   document.getElementById("s_a").innerHTML = "Error: "+err;
-});
+  catch (e){
+    document.getQuerySelector("s_a").innerHTML = `Error: {e}`;
+  }
+};
