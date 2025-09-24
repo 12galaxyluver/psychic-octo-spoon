@@ -38,19 +38,11 @@
         <button id="b">GENERATE</button>
         <h2 id="s_a"><i>Output will appear here</i></h2>
     </center>
-    <script type="module">
-        import { rands_a } from "./module.js";
-        document.QuerySelector("b").onclick = () => {
-            rands_a();
-        }
-         rands_a().then(msg => {
-                document.getElementById("s_a").innerHTML = msg;
-            }).catch(err => {
-                document.getElementById("s_a").innerHTML = "Error: "+err;
-            });
+    <script type="module src="script.js">
     </script>
 </body>
 </html>
+
 
 
 
