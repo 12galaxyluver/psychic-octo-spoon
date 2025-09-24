@@ -38,9 +38,9 @@
         <button id="b">GENERATE</button>
         <h2 id="s_a"><i>Output will appear here</i></h2>
     </center>
-    <script type="module" src="script.js">
+    <script type="module">
         import { rands_a } from "./module.js";
-        document.getQuerySelector("b") = () => {
+        document.QuerySelector("b").onclick = () => {
             rands_a();
         }
          rands_a().then(msg => {
@@ -51,6 +51,7 @@
     </script>
 </body>
 </html>
+
 
 
 
